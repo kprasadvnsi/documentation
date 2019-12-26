@@ -1,0 +1,26 @@
+
+site_name:  ' Orange Pi Community Docs'
+
+repo_url:   https://github.com/Orange-Pi-Community/documentation
+repo_name:  Github
+
+site_author: "Orange_Pi_Community_team"
+
+theme: 'material'
+
+markdown_extensions:
+    - admonition
+
+plugins:
+        - search:
+        - minify:
+            minify_html: true
+
+pages:
+    - Home: index.md
+
+    - 'Getting Started' :
+        - 'Connect your Orange Pi to WIFI' : 'wifi-connect.md'
+        - 'Update your System' : 'update.md'
+        - 'Change your Keyboard Language' : 'keyboard-language.md'
+
