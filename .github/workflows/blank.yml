@@ -14,7 +14,7 @@ jobs:
       run: echo Will try to build the documentation
     - name: Building the documentation
       run: |
-        mkdocs build && find . -name site
+        mkdocs build 
     - uses: actions/checkout@master
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
@@ -22,5 +22,5 @@ jobs:
         FTP_SERVER: ${{secrets.FTP_SERVER}}
         FTP_USERNAME: ${{secrets.FTP_USERNAME}}
         FTP_PASSWORD: ${{secrets.FTP_PASSWORD}}
-        LOCAL_DIR: /__w/documentation/documentation/site
+        LOCAL_DIR: site
         #ARGS: --delete        
