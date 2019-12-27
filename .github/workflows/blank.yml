@@ -14,5 +14,4 @@ jobs:
       run: echo Will try to build the documentation
     - name: Run a multi-line script
       run: |
-        mkdocs gh-deploy
-        
+        mkdocs build
