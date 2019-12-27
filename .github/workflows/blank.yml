@@ -5,7 +5,8 @@ on: [push]
 jobs:
   build:
 
-    runs-on: squidfunk/mkdocs-material
+    runs-on: ubuntu-latest
+    container: squidfunk/mkdocs-material
 
     steps:
     - uses: actions/checkout@v1
