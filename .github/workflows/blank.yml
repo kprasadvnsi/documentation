@@ -10,16 +10,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
+    - name: Informing the user
       run: echo Will try to build the documentation
-    - name: Run a multi-line script
+    - name: Building the documentation
       run: |
         mkdocs build
-        
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
-    runs-on: ubuntu-latest
-    steps:
     - uses: actions/checkout@master
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
