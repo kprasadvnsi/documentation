@@ -15,7 +15,6 @@ jobs:
     - name: Building the documentation
       run: |
         mkdocs build 
-    - uses: actions/checkout@master
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
