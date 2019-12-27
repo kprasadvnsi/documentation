@@ -10,7 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: echo Hello, world!
+      run: echo Will try to build the documentation
     - name: Run a multi-line script
       run: |
-        sudo apt install -y mkdocs && pip install bdist_wheel mkdocs-material && mkdocs gh-deploy
+        mkdocs gh-deploy
+        
