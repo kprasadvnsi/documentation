@@ -9,6 +9,7 @@ jobs:
     container: squidfunk/mkdocs-material
 
     steps:
+    - uses: actions/checkout@v1
     - run: |
         find . -name mkdocs.yml
         cd .. && mkdocs build 
