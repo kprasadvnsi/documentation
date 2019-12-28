@@ -11,7 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Building for github
-      run: mkdocs gh-deploy
+      run: |
+        git remote set-url origin git@github.com:Orange-Pi-Community/documentation.git && mkdocs gh-deploy
     - name: Building the documentation
       run: |
         mkdocs build 
