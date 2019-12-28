@@ -11,8 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: |
-        find . -name mkdocs.yml
-        cd .. && mkdocs build 
+        mkdocs build --config-file mkdocs.yml 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
