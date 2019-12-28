@@ -23,7 +23,6 @@ jobs:
       with:
         keepFiles: true
         
-    - uses: actions/checkout@v1
     - name: Building the documentation
       run: |
         mkdocs build 
