@@ -12,6 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Building for github
       run: |
+        mkdir -p /github/home/.ssh/
         echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
         git remote set-url origin git@github.com:Orange-Pi-Community/documentation.git
         mkdocs gh-deploy
