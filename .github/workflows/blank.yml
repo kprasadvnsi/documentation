@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - run: |
-        mkdocs build 
+        cd .. && mkdocs build 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
