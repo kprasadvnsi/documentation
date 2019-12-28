@@ -9,6 +9,8 @@ jobs:
     container: squidfunk/mkdocs-material
 
     steps:
+    - run: |
+        mkdocs build 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
