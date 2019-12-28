@@ -17,6 +17,8 @@ jobs:
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./site
+      with:
+        keepFiles: true
         
     - uses: actions/checkout@v1
     - name: Building the documentation
