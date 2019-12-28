@@ -9,14 +9,14 @@ jobs:
     container: squidfunk/mkdocs-material
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Building for github
-      run: |
-        mkdir -p /github/home/.ssh/
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        git remote add origin https://github.com/Orange-Pi-Community/documentation.git
-        git remote set-url origin https://github.com/Orange-Pi-Community/documentation.git
-        mkdocs gh-deploy
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
+        # PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
     - name: Building the documentation
       run: |
         mkdocs build 
