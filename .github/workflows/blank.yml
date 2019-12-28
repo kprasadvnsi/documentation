@@ -1,4 +1,4 @@
-name: CI
+name: Deploy Documentation
 
 on: [push]
 
@@ -10,8 +10,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Informing the user
-      run: echo Will try to build the documentation
+    - name: Building for github
+      run: mkdocs gh-deploy
     - name: Building the documentation
       run: |
         mkdocs build 
