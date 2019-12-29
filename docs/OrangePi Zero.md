@@ -6,7 +6,7 @@
 
 ## Hardware
 
-<img src="../assets/images/orangepi_zero.png" alt="Orange Pi Zero" style="zoom:25%;" />
+<img src="./assets/images/orangepi_zero.png" alt="Orange Pi Zero" style="zoom:25%;" />
 
 The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software CO., Limited](http://www.xunlong.tv/), a company located in Shenzhen, Guangdong, China.
 
@@ -15,7 +15,7 @@ The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software 
 It is based on a downgraded version of the famous AllWinner [H3](http://www.allwinnertech.com/index.php?c=product&a=index&id=47) (it lacks Gigabit MAC and 4K HDMI output support), named [H2+](http://www.allwinnertech.com/index.php?c=product&a=index&id=62).
 
 <figure>
-  <img src="../assets/images/h2.jpg" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/h2.jpg" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
   <figcaption>H2 description by AllWinner</figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ Video
 #### 1x13 Header
 
 <figure>
-  <img src="../assets/images/OPiZero_pinout.jpg" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/OPiZero_pinout.jpg" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
   <figcaption>OrangePi Zero Pinout by OSHLab.com</figcaption>
 </figure>
 
@@ -93,7 +93,7 @@ On the opposite side, we'll find an unpopulated series of holes. To connect more
 
 
 <figure>
-  <img src="../assets/images/header.png" alt="h2" style="zoom:25%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/header.png" alt="h2" style="zoom:25%;display: block; margin: 0 auto"/>
   <figcaption>2 x 13-pin header, angled, pitch 2.54 by Reichelt.de</figcaption>
 </figure>
 
@@ -116,7 +116,7 @@ On the opposite side, we'll find an unpopulated series of holes. To connect more
 The numbers on the board are not the numbers that you will be able to use in your program.
 
 <figure>
-  <img src="../assets/images/Orange-Pi-26pin-pinout-PIN-definition.bmp" alt="orangepi zero pinout" style="zoom:50%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/Orange-Pi-26pin-pinout-PIN-definition.bmp" alt="orangepi zero pinout" style="zoom:50%;display: block; margin: 0 auto"/>
   <figcaption>OrangePi Zero Pinout by micro-pi.ru</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ For example, port `PB12` would map to `GPIO 44`:
 ```
 
 <figure>
-  <img src="../assets/images/orange-pi-zero-gpio-pins-800x746.png" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/orange-pi-zero-gpio-pins-800x746.png" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
   <figcaption>OrangePi Zero Pinout by kaspars.net</figcaption>
 </figure>
 
@@ -143,21 +143,21 @@ A UART or serial console will be a life-saver when anything goes  wrong. The ser
 
 
 <figure>
-  <img src="../assets/images/orangepi_zero-top.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/orangepi_zero-top.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
   <figcaption>OrangePi Zero top by OrangePi</figcaption>
 </figure>
 
 To connect to the board in case of problem, or if you don't have SSH installed, you need a TTL to USB converter like this [one](https://fr.aliexpress.com/item/32844850903.html?spm=a2g0w.12010615.8148356.2.302667c4KZJ6eL):
 
 <figure>
-  <img src="../assets/images/uart2usb_converter.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/uart2usb_converter.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
   <figcaption>OrangePi USB2UART</figcaption>
 </figure>
 
 The RX an TX pins have to be connected to the TX and RX pins of the USB Serial converter respectively.
 
 <figure>
-  <img src="../assets/images/orangepiserialpin.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/orangepiserialpin.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
   <figcaption>UART by Codelectron</figcaption>
 </figure>
 
@@ -214,7 +214,7 @@ Then use "TV" or "AV" or "Audio Video" on your TV.
 One could also add the cheap Zero [hat](https://fr.aliexpress.com/item/32770665186.html?spm=a2g0w.12010612.8148356.3.106c7fdd5HGbr9) to get audio/tvout and more USB ports.
 
 <figure>
-  <img src="../assets/images/hat top.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/hat top.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
   <figcaption>OrangePi Zero hat by OrangePi</figcaption>
 </figure>
 
@@ -225,7 +225,7 @@ Once more, the cheapest and easiest way to connect a microphone to the OrangePi 
 The other way is to connect a circuit like this [one](http://www.orangepi.org/orangepibbsen/forum.php?mod=redirect&goto=findpost&ptid=2619&pid=18579&fromuid=1594746) to the three available pins:
 
 <figure>
-  <img src="../assets/images/mic.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
+  <img src="./assets/images/mic.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
   <figcaption>Mic circuit by edu_viccini</figcaption>
 </figure>
 
