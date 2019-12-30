@@ -165,7 +165,27 @@ So TX goes to RX, RX goes to TX, GND goes to GND. We could also connect the conv
 
 Setting up the connection from another machine (Windows or Linux) will be detailed later in this document.
 
+### OrangePi documentation and source code
 
+#### User manual
+
+The user manual can be found there: https://mega.nz/#!K11y1YhY!aaKAcEvmyfaRHzoesHtjktgULdCDGyAW5FKweDWVSfo.
+The NAS user manual can be found there: http://www.orangepi.org/download/ORANGE_PI-Zero-NAS-V1_1_user_manual.pdf.
+
+#### Mechanical schematics
+
+The DXF drawing for the LTS version can be found there: www.orangepi.org/download/ORANGE_PI-Zero-V1_5_mechanical.dxf.
+The DXF drawing for the 1.1 version can be found there: www.orangepi.org/download/ORANGE_PI-Zero-V1_1_PCB-DWG.rar.
+
+#### Electronic schematics
+
+The electronic schematics for the LTS version can be found there: www.orangepi.org/download/ORANGE_PI-ZERO_V_1_5.pdf .
+The electronic schematics for the 1.11 version can be found there: www.orangepi.org/download/orange_pi-zero-v1_11.pdf.
+
+#### Source code
+
+The Android SDK source code can be found there: https://mega.nz/#F!r8tX2Lzb!OnL-ZKHmWGxnNN2uAc4GNQ.
+The Linux source code can be found there: https://github.com/orangepi-xunlong.
 
 ## Linux
 
