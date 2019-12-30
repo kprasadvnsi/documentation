@@ -6,7 +6,8 @@
 
 ## Hardware
 
-<img src="./assets/images/orangepi_zero.png" alt="Orange Pi Zero" style="zoom:25%;" />
+> :camera: **Orange Pi Zero v1.5**
+> ![Orange Pi Zero](./assets/images/orangepi_zero.png){.center .small}
 
 The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software CO., Limited](http://www.xunlong.tv/), a company located in Shenzhen, Guangdong, China.
 
@@ -14,10 +15,8 @@ The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software 
 
 It is based on a downgraded version of the famous AllWinner [H3](http://www.allwinnertech.com/index.php?c=product&a=index&id=47) (it lacks Gigabit MAC and 4K HDMI output support), named [H2+](http://www.allwinnertech.com/index.php?c=product&a=index&id=62).
 
-<figure>
-  <img src="./assets/images/h2.jpg" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
-  <figcaption>H2 description by AllWinner</figcaption>
-</figure>
+> :camera: **H2 description by AllWinner**
+> ![H2 description by AllWinner](./assets/images/h2.jpg){.center}
 
 On the Zero, not all the features of the H2+ are hardwired. So we don't have any camera, HDMI nor Nand Flash.
 
@@ -64,10 +63,8 @@ Video
 
 #### 1x13 Header
 
-<figure>
-  <img src="./assets/images/OPiZero_pinout.jpg" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
-  <figcaption>OrangePi Zero Pinout by OSHLab.com</figcaption>
-</figure>
+> :camera: **OrangePi Zero Pinout by OSHLab.com**
+> ![zoomify](./assets/images/OPiZero_pinout.jpg){.center .small}
 
 On the board itself, there is a first row of pins that reflect a few features of the SoC:
 
@@ -92,10 +89,8 @@ On the board itself, there is a first row of pins that reflect a few features of
 On the opposite side, we'll find an unpopulated series of holes. To connect more easily Dupont cables, one could solder a 2 x 13-pin header, angled, pitch 2.54 like this [one](https://www.reichelt.de/2-x-13-pin-header-angled-pitch-2-54-sl-2x13w-2-54-p19491.html?&trstct=pol_10):
 
 
-<figure>
-  <img src="./assets/images/header.png" alt="h2" style="zoom:25%;display: block; margin: 0 auto"/>
-  <figcaption>2 x 13-pin header, angled, pitch 2.54 by Reichelt.de</figcaption>
-</figure>
+> :camera: **2 x 13-pin header, angled, pitch 2.54 by Reichelt.de**
+> ![zoomify](./assets/images/header.png){.center .small}
 
 | 2 × 13 Header |                |      |                |
 | ------------- | -------------- | ---- | -------------- |
@@ -115,10 +110,8 @@ On the opposite side, we'll find an unpopulated series of holes. To connect more
 
 The numbers on the board are not the numbers that you will be able to use in your program.
 
-<figure>
-  <img src="./assets/images/Orange-Pi-26pin-pinout-PIN-definition.bmp" alt="orangepi zero pinout" style="zoom:50%;display: block; margin: 0 auto"/>
-  <figcaption>OrangePi Zero Pinout by micro-pi.ru</figcaption>
-</figure>
+> :camera: **OrangePi Zero Pinout by micro-pi.ru**
+> ![zoomify](./assets/images/Orange-Pi-26pin-pinout-PIN-definition.bmp){.center .small}
 
 As seen [there](https://kaspars.net/blog/orange-pi-zero-gpio), there is a formula that will help you to get the GPIO number when you have the pin number:
 
@@ -132,34 +125,25 @@ For example, port `PB12` would map to `GPIO 44`:
 (2 - 1) * 32 + 12 = 44
 ```
 
-<figure>
-  <img src="./assets/images/orange-pi-zero-gpio-pins-800x746.png" alt="h2" style="zoom:50%;display: block; margin: 0 auto"/>
-  <figcaption>OrangePi Zero Pinout by kaspars.net</figcaption>
-</figure>
+> :camera: **OrangePi Zero Pinout by kaspars.net**
+> ![zoomify](./assets/images/orange-pi-zero-gpio-pins-800x746.png){.center .small}
 
 #### Serial console
 
 A UART or serial console will be a life-saver when anything goes  wrong. The serial interface pins lies next to the Ethernet plug:
 
-
-<figure>
-  <img src="./assets/images/orangepi_zero-top.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
-  <figcaption>OrangePi Zero top by OrangePi</figcaption>
-</figure>
+> :camera: **OrangePi Zero top by OrangePi**
+> ![zoomify](./assets/images/orangepi_zero-top.png){.center .small}
 
 To connect to the board in case of problem, or if you don't have SSH installed, you need a TTL to USB converter like this [one](https://fr.aliexpress.com/item/32844850903.html?spm=a2g0w.12010615.8148356.2.302667c4KZJ6eL):
 
-<figure>
-  <img src="./assets/images/uart2usb_converter.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
-  <figcaption>OrangePi USB2UART</figcaption>
-</figure>
+> :camera: **OrangePi USB2UART**
+> ![zoomify](./assets/images/uart2usb_converter.png){.center .small}
 
 The RX an TX pins have to be connected to the TX and RX pins of the USB Serial converter respectively.
 
-<figure>
-  <img src="./assets/images/orangepiserialpin.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
-  <figcaption>UART by Codelectron</figcaption>
-</figure>
+> :camera: **UART by Codelectron**
+> ![zoomify](./assets/images/orangepiserialpin.png){.center .small}
 
 So TX goes to RX, RX goes to TX, GND goes to GND. We could also connect the converter to the pins 11 or 10 (RX, to connect to TX) and 13 or 8 (TX, to connect to RX).
 
@@ -169,23 +153,23 @@ Setting up the connection from another machine (Windows or Linux) will be detail
 
 #### User manual
 
-The user manual can be found there: https://mega.nz/#!K11y1YhY!aaKAcEvmyfaRHzoesHtjktgULdCDGyAW5FKweDWVSfo.
-The NAS user manual can be found there: http://www.orangepi.org/download/ORANGE_PI-Zero-NAS-V1_1_user_manual.pdf.
+The user manual can be found there: [https://mega.nz/#!K11y1YhY!aaKAcEvmyfaRHzoesHtjktgULdCDGyAW5FKweDWVSfo](https://mega.nz/#!K11y1YhY!aaKAcEvmyfaRHzoesHtjktgULdCDGyAW5FKweDWVSfo).
+The NAS user manual can be found there: [http://www.orangepi.org/download/ORANGE_PI-Zero-NAS-V1_1_user_manual.pdf](http://www.orangepi.org/download/ORANGE_PI-Zero-NAS-V1_1_user_manual.pdf).
 
 #### Mechanical schematics
 
-The DXF drawing for the LTS version can be found there: www.orangepi.org/download/ORANGE_PI-Zero-V1_5_mechanical.dxf.
-The DXF drawing for the 1.1 version can be found there: www.orangepi.org/download/ORANGE_PI-Zero-V1_1_PCB-DWG.rar.
+The DXF drawing for the LTS version can be found there: [http://www.orangepi.org/download/ORANGE_PI-Zero-V1_5_mechanical.dxf](http://www.orangepi.org/download/ORANGE_PI-Zero-V1_5_mechanical.dxf).
+The DXF drawing for the 1.1 version can be found there: [http://www.orangepi.org/download/ORANGE_PI-Zero-V1_1_PCB-DWG.rar](http://www.orangepi.org/download/ORANGE_PI-Zero-V1_1_PCB-DWG.rar).
 
 #### Electronic schematics
 
-The electronic schematics for the LTS version can be found there: www.orangepi.org/download/ORANGE_PI-ZERO_V_1_5.pdf .
-The electronic schematics for the 1.11 version can be found there: www.orangepi.org/download/orange_pi-zero-v1_11.pdf.
+The electronic schematics for the LTS version can be found there: [http://www.orangepi.org/download/ORANGE_PI-ZERO_V_1_5.pdf](http://www.orangepi.org/download/ORANGE_PI-ZERO_V_1_5.pdf).
+The electronic schematics for the 1.11 version can be found there: [http://www.orangepi.org/download/orange_pi-zero-v1_11.pdf](http://www.orangepi.org/download/orange_pi-zero-v1_11.pdf).
 
 #### Source code
 
-The Android SDK source code can be found there: https://mega.nz/#F!r8tX2Lzb!OnL-ZKHmWGxnNN2uAc4GNQ.
-The Linux source code can be found there: https://github.com/orangepi-xunlong.
+The Android SDK source code can be found there: [https://mega.nz/#F!r8tX2Lzb!OnL-ZKHmWGxnNN2uAc4GNQ](https://mega.nz/#F!r8tX2Lzb!OnL-ZKHmWGxnNN2uAc4GNQ).
+The Linux source code can be found there: [https://github.com/orangepi-xunlong](https://github.com/orangepi-xunlong).
 
 ## Linux
 
@@ -233,10 +217,8 @@ As seen [there](https://forum.armbian.com/topic/6582-orange-pi-zero-h2h3-tv-out-
 Then use "TV" or "AV" or "Audio Video" on your TV. 
 One could also add the cheap Zero [hat](https://fr.aliexpress.com/item/32770665186.html?spm=a2g0w.12010612.8148356.3.106c7fdd5HGbr9) to get audio/tvout and more USB ports.
 
-<figure>
-  <img src="./assets/images/hat top.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
-  <figcaption>OrangePi Zero hat by OrangePi</figcaption>
-</figure>
+> :camera: **OrangePi Zero hat by OrangePi**
+> ![OrangePi Zero hat by OrangePi](./assets/images/hat top.png){.center}
 
 ### Microphone
 
@@ -244,10 +226,8 @@ Once more, the cheapest and easiest way to connect a microphone to the OrangePi 
 
 The other way is to connect a circuit like this [one](http://www.orangepi.org/orangepibbsen/forum.php?mod=redirect&goto=findpost&ptid=2619&pid=18579&fromuid=1594746) to the three available pins:
 
-<figure>
-  <img src="./assets/images/mic.png" alt="orangepi zero pinout" style="zoom:80%;display: block; margin: 0 auto"/>
-  <figcaption>Mic circuit by edu_viccini</figcaption>
-</figure>
+> :camera: **Mic circuit by edu_viccini**
+> ![zoomify](./assets/images/mic.png){.center .small}
 
 The MIC1N, MIC1P, MIC_MBIAS have to be connected to the respective pins of the 1x13 Header (12, 11, 10).
 
