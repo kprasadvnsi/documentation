@@ -24,6 +24,6 @@ pages:
         - 'Update your System' : 'update.md'
         - 'Change your Keyboard Language' : 'keyboard-language.md'
 	
-    - Boards : 
+    - 'Boards' : 
         - 'OrangePi Zero' : 'OrangePi Zero.md'
 
