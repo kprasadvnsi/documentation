@@ -23,7 +23,7 @@ pages:
         - 'Connect your Orange Pi to WIFI' : 'wifi-connect.md'
         - 'Update your System' : 'update.md'
         - 'Change your Keyboard Language' : 'keyboard-language.md'
-	
+
     - 'Boards' : 
         - 'OrangePi Zero' : 'OrangePi Zero.md'
 
