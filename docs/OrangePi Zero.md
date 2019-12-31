@@ -6,9 +6,9 @@
 
 ## Hardware
 
-
 ![Orange Pi Zero](./assets/images/orangepi_zero.png)
-**Orange Pi Zero v1.5**
+
+*Orange Pi Zero v1.5*
 
 The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software CO., Limited](http://www.xunlong.tv/), a company located in Shenzhen, Guangdong, China.
 
