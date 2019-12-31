@@ -7,7 +7,6 @@
 ## Hardware
 
 ![Orange Pi Zero](./assets/images/orangepi_zero.png)
-
 *Orange Pi Zero v1.5*
 
 The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software CO., Limited](http://www.xunlong.tv/), a company located in Shenzhen, Guangdong, China.
@@ -16,8 +15,8 @@ The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software 
 
 It is based on a downgraded version of the famous AllWinner [H3](http://www.allwinnertech.com/index.php?c=product&a=index&id=47) (it lacks Gigabit MAC and 4K HDMI output support), named [H2+](http://www.allwinnertech.com/index.php?c=product&a=index&id=62).
 
-> :camera: **H2 description by AllWinner**
-> ![H2 description by AllWinner](./assets/images/h2.jpg){.center}
+![H2 description by AllWinner](./assets/images/h2.jpg){.center}
+*H2 description by AllWinner*
 
 On the Zero, not all the [features of the H2+](http://wiki.friendlyarm.com/wiki/images/0/08/Allwinner_H2%2B_Datasheet_V1.2.pdf) are hardwired. So we don't have any camera, HDMI nor Nand Flash.
 
