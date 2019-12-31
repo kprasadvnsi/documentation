@@ -6,8 +6,9 @@
 
 ## Hardware
 
+
+![Orange Pi Zero](./assets/images/orangepi_zero.png)
 > :camera: **Orange Pi Zero v1.5**
-> ![Orange Pi Zero](./assets/images/orangepi_zero.png){.center .small}
 
 The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software CO., Limited](http://www.xunlong.tv/), a company located in Shenzhen, Guangdong, China.
 
@@ -18,7 +19,7 @@ It is based on a downgraded version of the famous AllWinner [H3](http://www.allw
 > :camera: **H2 description by AllWinner**
 > ![H2 description by AllWinner](./assets/images/h2.jpg){.center}
 
-On the Zero, not all the features of the H2+ are hardwired. So we don't have any camera, HDMI nor Nand Flash.
+On the Zero, not all the [features of the H2+](http://wiki.friendlyarm.com/wiki/images/0/08/Allwinner_H2%2B_Datasheet_V1.2.pdf) are hardwired. So we don't have any camera, HDMI nor Nand Flash.
 
 CPU
 
@@ -127,6 +128,7 @@ For example, port `PB12` would map to `GPIO 44`:
 
 > :camera: **OrangePi Zero Pinout by kaspars.net**
 > ![zoomify](./assets/images/orange-pi-zero-gpio-pins-800x746.png){.center .small}
+
 
 #### Serial console
 
