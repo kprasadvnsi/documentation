@@ -11,7 +11,15 @@ theme: 'material'
 markdown_extensions:
     - admonition
     - pymdownx.tilde
-    
+    - pymdownx.betterem:
+      smart_enable: all
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.tilde
 plugins:
         - search:
         - minify:
