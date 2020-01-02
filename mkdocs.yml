@@ -10,7 +10,8 @@ theme: 'material'
 
 markdown_extensions:
     - admonition
-
+    - md_strike
+    
 plugins:
         - search:
         - minify:
