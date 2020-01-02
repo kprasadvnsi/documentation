@@ -93,21 +93,21 @@ On the opposite side, we'll find an unpopulated series of holes. To connect more
 > :camera: *2 x 13-pin header, angled, pitch 2.54 by Reichelt.de*
 > ![2 x 13-pin header, angled, pitch 2.54 by Reichelt.de](./assets/images/header.png)
 
-| 2 × 13 Header |                |      |                |
-| ------------- | -------------- | ---- | -------------- |
-| 1             | *3,3 V*        | 2    | *5V*           |
-| 3             | PB21 TWI2-SDA  | 4    | *5V*           |
-| 5             | PB20 TWI2-SCK  | 6    | *GND*          |
-| 7             | PI3 PWM1       | 8    | PH0 UART3_TX   |
-| 9             | *GND*          | 10   | PH1 UART3_RX   |
-| 11            | PI19 UART2_RX  | 12   | PH2            |
-| 13            | PI18 UART2_TX  | 14   | *GND*          |
-| 15            | PI17 UART2_CTS | 16   | PH20 CAN_TX    |
-| 17            | *3,3 V*        | 18   | PH21 CAN_RX    |
-| 19            | PI12 SPI0_MOSI | 20   | *GND*          |
-| 21            | PI13 SPI0_MISO | 22   | PI16 UART2_RTS |
-| 23            | PI11 SPI0_CLK  | 24   | PI10 SPI0_CS0  |
-| 25            | *GND*          | 26   | PI14 SPI0_CS1  |
+| 2 × 13 Header |                                          |      |                                                   |
+| ------------- | ---------------------------------------- | ---- | ------------------------------------------------- |
+| 1             | *3,3 V*                                  | 2    | *5V*                                              |
+| 3             | PB21 TWI2-SDA / TWI0_SDA / PA12 / GPIO12 | 4    | *5V*                                              |
+| 5             | PB20 TWI2-SCK / TWI0_SCK / PA11 / GPIO11 | 6    | *GND*                                             |
+| 7             | PI3 PWM1 / PA06 / GPIO6                  | 8    | PH0 UART3_TX / UART1_TX / PG06 / GPIO198          |
+| 9             | *GND*                                    | 10   | PH1 UART3_RX / UART1_RX / PG07 / GPIO199          |
+| 11            | PI19 UART2_RX / PA01 / GPIO1             | 12   | PH2 / SIM_CLK / PA_EINT7 / PA07 / GPIO7           |
+| 13            | PI18 UART2_TX / PA00 / GPIO0             | 14   | *GND*                                             |
+| 15            | PI17 UART2_CTS / PA03 / GPIO3            | 16   | PH20 CAN_TX / TWI1-SDA / PA19 / GPIO19            |
+| 17            | *3,3 V*                                  | 18   | PH21 CAN_RX / TWI1-SCK / PA18 / GPIO18            |
+| 19            | PI12 SPI0_MOSI / PA15 / GPIO15           | 20   | *GND*                                             |
+| 21            | PI13 SPI0_MISO / PA16 / GPIO16           | 22   | PI16 UART2_RTS / UART2_RTS / PA02 / GPIO2         |
+| 23            | PI11 SPI0_CLK / PA14 / GPIO14            | 24   | PI10 SPI0_CS0 / SPI1_CS / PA13 / GPIO13           |
+| 25            | *GND*                                    | 26   | PI14 SPI0_CS1 / SIM_DET/PA_EINT10 / PA10 / GPIO10 |
 
 The numbers on the board are not the numbers that you will be able to use in your program.
 
@@ -129,6 +129,10 @@ For example, port `PB12` would map to `GPIO 44`:
 > :camera: *OrangePi Zero Pinout by kaspars.net*
 > ![OrangePi Zero Pinout by kaspars.net](./assets/images/orange-pi-zero-gpio-pins-800x746.png)
 
+Here is a more detailed pinout:
+
+> :camera: *detailed pinout courtesy of [MySensors](https://www.mysensors.org/build/orange)*
+> ![detailed pinout courtesy of [MySensors](https://www.mysensors.org/build/orange)](C:\support\users\arm\documentation\docs\assets\images\Orange-Pi-Zero-pinout.jpg)
 
 #### Serial console
 
@@ -250,6 +254,65 @@ ctl.!default {
 
 ### InfraRed
 
+The H2+ has an inbuilt IR controller, but no IR receiver on board. You can get a cheap [hat](http://fr.aliexpress.com/item/32770665186.html?spm=a2g0w.12010612.8148356.3.106c7fdd5HGbr9) that will give you more USB ports, TVOUT and an IR receiver, or go your own way and attach one to the GPIO.
+
+#### Attach your own
+
+#### Software
+
+> This micro howto is mostly inspired by [codelectron](http://codelectron.com/how-to-setup-infrared-remote-control-in-orange-pi-zero-using-lircd-and-python/).
+
+On this board, and with Linux in general, infrared control is handled by project [LIRC](http://www.lirc.org/). LIRC allows to decode, and even send infrared signals for lots of commonly used infrared remote controls.
+The most important part of LIRC is the daemon `lircd`, which decodes infrared signal received by the device drivers. Il will then provide the information on a Unix socket. 
+It will also accept commands for IR signals to be sent if the hardware supports it.
+The second daemon program is called `lircmd`. It will connect to lircd and translate the decoded IR signal to mouse movements.
+
+ 
+
+```bash
+cat /etc/armbian-release
+BOARD=orangepizero
+BOARD_NAME="Orange Pi Zero"
+BOARDFAMILY=sun8i
+BUILD_REPOSITORY_URL=https://github.com/armbian/rkbin
+BUILD_REPOSITORY_COMMIT=cd0c2bb
+DISTRIBUTION_CODENAME=buster
+DISTRIBUTION_STATUS=supported
+VERSION=19.11.3
+LINUXFAMILY=sunxi
+BRANCH=current
+ARCH=arm
+IMAGE_TYPE=stable
+BOARD_TYPE=conf
+INITRD_ARCH=arm
+KERNEL_IMAGE_TYPE=Image
+```
+
+In the Armbian version mentioned above, the IR kernel module for Orange Pi is not loaded by default. CIR stands for [Consumer Infra Red](https://en.wikipedia.org/wiki/Consumer_IR).
+First of all, we have to install cir support via armbian-config. System -> Hardware -> cir
+
+> :camera: *CIR support install*
+> ![CIR support install](./assets/images/CIR.png){.center}
+
+Once your machine has rebooted, check if the CIR kernel module is available.
+
+```bash
+lsmod |grep sunxi_cir
+```
+
+returns nothing. So we have to load the module manually:
+
+```bash
+modprobe sunxi_cir
+```
+
+After loading the module check if the device node is created and if that exist you can test the incoming IR signal.
+
+```bash
+ls /dev/lirc0
+# if the above command runs and waits then press any key in your IR remote pointing it to the OPi IR Receiver
+```
+
 ## Temperature
 
 ### Passive cooling
@@ -261,4 +324,5 @@ If you're thinking of an enclosure to keep dust out of your board, think twice, 
 
 ### Active cooling
 
-[fan](https://github.com/nopnop2002/OrangePi-ZERO-FAN-HAT)
+Another way of cooling the Zero is to use a fan. It's not such a good idea to plug a fan directly into the GPIO (be it PWM or not), as it could damage the board when slowing down.
+You need to have at least a [Schottky diode](https://en.wikipedia.org/wiki/Schottky_diode)  or at least a [resistor and a transistor](https://raspberrypi.stackexchange.com/a/99056/93266) to protect the GPIO, or you can go the full monty with a specific [hat](https://github.com/nopnop2002/OrangePi-ZERO-FAN-HAT).
