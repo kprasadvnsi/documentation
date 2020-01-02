@@ -12,7 +12,7 @@ markdown_extensions:
     - admonition
     - pymdownx.tilde
     - pymdownx.betterem:
-      smart_enable: all
+        smart_enable: all
     - pymdownx.details
     - pymdownx.emoji:
         emoji_generator: !!python/name:pymdownx.emoji.to_svg
