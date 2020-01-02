@@ -65,7 +65,7 @@ Video
 #### 1x13 Header
 
 > :camera: *OrangePi Zero Pinout by OSHLab.com*
-> ![zoomify](./assets/images/OPiZero_pinout.jpg){.center .small}
+> ![OrangePi Zero Pinout by OSHLab.com](./assets/images/OPiZero_pinout.jpg)
 
 On the board itself, there is a first row of pins that reflect a few features of the SoC:
 
@@ -91,7 +91,7 @@ On the opposite side, we'll find an unpopulated series of holes. To connect more
 
 
 > :camera: *2 x 13-pin header, angled, pitch 2.54 by Reichelt.de*
-> ![zoomify](./assets/images/header.png){.center .small}
+> ![2 x 13-pin header, angled, pitch 2.54 by Reichelt.de](./assets/images/header.png)
 
 | 2 × 13 Header |                |      |                |
 | ------------- | -------------- | ---- | -------------- |
@@ -112,7 +112,7 @@ On the opposite side, we'll find an unpopulated series of holes. To connect more
 The numbers on the board are not the numbers that you will be able to use in your program.
 
 > :camera: *OrangePi Zero Pinout by micro-pi.ru*
-> ![zoomify](./assets/images/Orange-Pi-26pin-pinout-PIN-definition.bmp){.center .small}
+> ![OrangePi Zero Pinout by micro-pi.ru](./assets/images/Orange-Pi-26pin-pinout-PIN-definition.bmp)
 
 As seen [there](https://kaspars.net/blog/orange-pi-zero-gpio), there is a formula that will help you to get the GPIO number when you have the pin number:
 
@@ -127,7 +127,7 @@ For example, port `PB12` would map to `GPIO 44`:
 ```
 
 > :camera: *OrangePi Zero Pinout by kaspars.net*
-> ![zoomify](./assets/images/orange-pi-zero-gpio-pins-800x746.png){.center .small}
+> ![OrangePi Zero Pinout by kaspars.net](./assets/images/orange-pi-zero-gpio-pins-800x746.png)
 
 
 #### Serial console
@@ -135,17 +135,17 @@ For example, port `PB12` would map to `GPIO 44`:
 A UART or serial console will be a life-saver when anything goes  wrong. The serial interface pins lies next to the Ethernet plug:
 
 > :camera: *OrangePi Zero top by OrangePi*
-> ![zoomify](./assets/images/orangepi_zero-top.png){.center .small}
+> ![OrangePi Zero top by OrangePi](./assets/images/orangepi_zero-top.png)
 
 To connect to the board in case of problem, or if you don't have SSH installed, you need a TTL to USB converter like this [one](https://fr.aliexpress.com/item/32844850903.html?spm=a2g0w.12010615.8148356.2.302667c4KZJ6eL):
 
 > :camera: *OrangePi USB2UART*
-> ![zoomify](./assets/images/uart2usb_converter.png){.center .small}
+> ![OrangePi USB2UART](./assets/images/uart2usb_converter.png)
 
 The RX an TX pins have to be connected to the TX and RX pins of the USB Serial converter respectively.
 
 > :camera: *UART by Codelectron*
-> ![zoomify](./assets/images/orangepiserialpin.png){.center .small}
+> ![UART by Codelectron](./assets/images/orangepiserialpin.png)
 
 So TX goes to RX, RX goes to TX, GND goes to GND. We could also connect the converter to the pins 11 or 10 (RX, to connect to TX) and 13 or 8 (TX, to connect to RX).
 
@@ -229,7 +229,7 @@ Once more, the cheapest and easiest way to connect a microphone to the OrangePi 
 The other way is to connect a circuit like this [one](http://www.orangepi.org/orangepibbsen/forum.php?mod=redirect&goto=findpost&ptid=2619&pid=18579&fromuid=1594746) to the three available pins:
 
 > :camera: *Mic circuit by edu_viccini*
-> ![zoomify](./assets/images/mic.png){.center .small}
+> ![Mic circuit by edu_viccini](./assets/images/mic.png)
 
 The MIC1N, MIC1P, MIC_MBIAS have to be connected to the respective pins of the 1x13 Header (12, 11, 10).
 
