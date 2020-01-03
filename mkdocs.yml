@@ -10,7 +10,15 @@ theme: 'material'
 
 markdown_extensions:
     - admonition
-
+    - pymdownx.tilde
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
 plugins:
         - search:
         - minify:
@@ -23,4 +31,7 @@ pages:
         - 'Connect your Orange Pi to WIFI' : 'wifi-connect.md'
         - 'Update your System' : 'update.md'
         - 'Change your Keyboard Language' : 'keyboard-language.md'
+
+    - 'Boards' : 
+        - 'OrangePi Zero' : 'OrangePi Zero.md'
 
