@@ -1,5 +1,5 @@
 
-site_name:  ' Orange Pi Community Docs'
+site_name: ' Orange Pi Community Docs'
 
 repo_url:   https://github.com/Orange-Pi-Community/documentation
 repo_name:  Github
@@ -23,4 +23,15 @@ pages:
         - 'Connect your Orange Pi to WIFI' : 'wifi-connect.md'
         - 'Update your System' : 'update.md'
         - 'Change your Keyboard Language' : 'keyboard-language.md'
+        - 'Flash a OS to a SD Card' : 'etcher.md'
+
+    - 'Orange Pi i96' :
+        - 'Orange Pi i96 Overview' : 'i96-overview.md'
+        - 'Getting Started with the i96' : 'i96-start.md'
+
+
+    - 'Orange Pi 2G IOT' :
+        - 'Orange Pi 2G IOT Overview' : '2G-overview.md'
+        - 'Getting Started with the 2G IOT' : '2G-start.md'
+        - 'Connect to Cellular Network' : '2G-connect.md'
 
