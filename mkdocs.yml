@@ -10,7 +10,15 @@ theme: 'material'
 
 markdown_extensions:
     - admonition
-
+    - pymdownx.tilde
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
 plugins:
         - search:
         - minify:
@@ -34,4 +42,7 @@ pages:
         - 'Orange Pi 2G IOT Overview' : '2G-overview.md'
         - 'Getting Started with the 2G IOT' : '2G-start.md'
         - 'Connect to Cellular Network' : '2G-connect.md'
+
+    - 'Boards' : 
+        - 'OrangePi Zero' : 'OrangePi Zero.md'
 
