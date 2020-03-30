@@ -1,46 +1,34 @@
 # How  to update your Orange PI
 
-When you use Debian or Armbian ( A Debian variation build especially for ARM Devices),  updating your System via the the APT Packetmanager is easy.
-
+## Debian (and Debian-derived distributions)
 #
 
-At first u need to update the  list of repositories:
+First, ensure that all distribution repositories are up to date, with the following command:
 
 ```sudo apt update ```
 
-U have to  enter your Password, note u dont get any feedback on it, just  press enter when u entered it.
-+ Standard Password for Orange Pi Images is `orangepi`
+You will be prompted at this point for your sudo password, like this:
 
-+ Standard Password for for Armbian Images is `1234`
+```
+[sudo] password for Saoirse:
+```
+
+Please note:
+* you will *not* receive feedback while typing your sudo password; this is normal.
+* the default password (for most orange pi images) is `orangepi`, while for armbian, it is `1234` (though you would have been prompted to change this on first boot). Others may differ; please refer to your distribution's documentation.
 
 
-#
-
-After the list of repositories is updated u now can upgrade the System:
-
-```sudo apt upgrade ```
-
-Again u will be asked for your Password.
 
 #
 
-When your connection to the repository is a bit slow u can change your repositories to a location which is closer to you.  For this u have to change the  repositories in `/etc/apt/source.list`
+Once the list of repositories has been updated, you may see something like:
 
-If u want to edit this file u can use the command line editor `nano` ,
+```
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+```
 
-```sudo nano  /etc/apt/sources.list ```
+This indicates that updates are available, just as it says. To install them, run the following:
+```sudo apt dist-upgrade ```
 
-if its not preinstalled u can install it with: `sudo apt install nano `
-
-#
-
-More information can be found at https://wiki.debian.org/SourcesList
-
-U can generate a source.list convenient with this Webpage:
-https://debgen.simplylinux.ch
-
-Here u can find a guide on howto use the nano editor:
-https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/
-
-
+Depending on your configuration, you may be asked for your sudo password again. To change this setting, see [user management aud sudo](users.md).
 

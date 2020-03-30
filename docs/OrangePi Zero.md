@@ -14,21 +14,20 @@ The OrangePi Zero is a Single Board Computer made by [Shenzhen Xunlong Software 
 
 ### SoC
 
-It is based on a downgraded version of the famous AllWinner [H3](http://www.allwinnertech.com/index.php?c=product&a=index&id=47) (it lacks Gigabit MAC and 4K HDMI output support), named [H2+](http://www.allwinnertech.com/index.php?c=product&a=index&id=62).
+It is based on a downgraded version of the famous AllWinner [H3](http://www.allwinnertech.com/index.php?c=product&a=index&id=47) chip. This chip lacks Gigabit MAC and 4K HDMI output support), and is named [H2+](http://www.allwinnertech.com/index.php?c=product&a=index&id=62).
 
 > :camera: *H2 description by AllWinner*
 > ![H2 description by AllWinner](./assets/images/h2.jpg)
 
-On the Zero, not all the [features of the H2+](http://wiki.friendlyarm.com/wiki/images/0/08/Allwinner_H2%2B_Datasheet_V1.2.pdf) are hardwired. So we don't have any camera, HDMI nor Nand Flash.
+On the Zero, not all the [features of the H2+](http://wiki.friendlyarm.com/wiki/images/0/08/Allwinner_H2%2B_Datasheet_V1.2.pdf) are hardwired. Thus, access to the camera, HDMI and Nand Flash are unavailable.
 
 CPU
 
-- Quad-core Cortex™-A7 running from 480MHz to 1008MHz
+- The Allwinner H2+ is based around a quad-core Cortex™-A7 (32-bit) ARM CPU running at a dyamic clock speed -  anywhere 480MHz to 1008MHz.
 
 GPU
 
-- Muti-Core Mali400 GPU 
-- Supports OpenGL ES 2.0
+- The system uses a multi-Core Mali400 GPU,  which has full support in mainline Linux kernels, and supports OpenGL ES 2.0
 
 Display
 

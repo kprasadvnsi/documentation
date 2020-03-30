@@ -1,16 +1,22 @@
 # Add a WIFI Connection
 
-Their are convenient ways on how u can add  WIFI Connection.
-
+Their are several ways to add  a WIFI Connection, depending on your preference. These ways are listed below:
+All of these methods  assume that your board has WiFI, and/or a USB wifi adapter
 #
 
-The first method is  via the Software `nmtui`
-U just type `nmtui` into your Terminal, then u can easily add a new WIFI Connection via the Interface.
+## Method 1: `nmtui`
+The `nmtui` tool, or `NetworkManager Text User Interface`, is a component of NetworkManager, and can be used (in a TUI style) to add and select a WIFi network.
+Nmtui is, however, also capable of managing other types of networks, and depending on your circumstances may not be the best option. This leads is to...
 
-Another method is to use  `nmcli `
-first u list the available WIFI Networks.
+## Method 2: `nmcli `
+`nmcli`, like `nmtui`, is a component of networkmanager, and has the same features.
 
-```nmcli device wifi list```
+To connect to a wireless network, follow these instructions:
+
+### 1: list wireless networks
+To show a list of wi-fi networks, at a sudo-enabled terminal, enter:
+
+```sudo nmcli device wifi list```
 
 The output should look like this:
 
@@ -24,26 +30,33 @@ The output should look like this:
 
 ```
 
-
-Now u can connect to a  Wifi without Password via:
-
-``` sudo nmcli device wifi connect '(your wifi network name/SSID)' ifname wlan0 ```
-
-and to a Wifi with Password via:
-
-``` udo nmcli device wifi connect '(your wifi network name/SSID)' password '(your wifi password)' ifname wlan0 ```
-
-Keep in mind that u dont get any feedback while u type your Password.
-
-If u have a Wifi with hidden SSID  u need to add `hidden yes ` to the end of the command.
+### Connect to network (without password)
+If your network does *not* require a password (I.E. is not secure), you can connect to it with the following command:
 
 
-Now u can Check your connection:
+``` sudo nmcli device wifi connect 'WiFINetworkName' ifname wlan0 ```
 
-```  nmcli connection show --active ```
+Give it a few seconds to connect, then verify your connectivity with:
 
-To test u can now ping Googles DNS Server
+``` ip -br address show dev wlan0 ```
 
-``` ping -c 5 8.8.8.8  ```
+### Connect to network (with password)
+However, if your network does require a password (as most should), you may connect to it with the following command, replacing `WiFiNetworkName` and `WiFiNetworkPass` with your network name and password, respectively:
 
-Congratulations u are now connected to a WIFI Network
+
+
+``` sudo nmcli device wifi connect 'WiFiNetworkName' password 'WifiPass' ifname wlan0 ```
+
+Please do keep in mind that you will *not* receive feedback while typing the *password* component of the above command, for security reasons.
+
+Once again, verify your connectivity with:
+
+``` ip -br address show dev wlan0 ```
+
+## Tips and Tricks
+
+* When using `nmcli` and connecting to a wi-fi network who's eSSID (name) is not broadcast (I.E. hidden) you will need to add `hidden yes` to your `connect` command.
+* If a `wlan0` interface does *not* exist on the system, please verify that your board *has* wifi (either via an internal adapter or over USB), that firmware is loaded (if necesary), that your kernel supports wifi, and that it does not have another name (such as wlp3s0). For more info on firmware, please see [wifi troubleshooting](wifi-troubleshooting.md)
+
+* If the `ip -br address show dev wlan0` command does *not* show an IPV4 address, please verify that a DHCP server is present on your network. If not, please refer to [static network configuration](static-network.md) for more information.
+
