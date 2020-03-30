@@ -1,5 +1,5 @@
 ## Orange Pi Community Docs
-
+Welcome. This site is a collective effort to document the Orange Pi series of boards, their features, and how best to configure then.
 
 If you are new to Orange Pi boards (and/or single-board computers in general), the Getting Started Section provides essential information on how to set up and use your Orange Pi Board.
 
