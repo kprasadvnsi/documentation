@@ -31,7 +31,7 @@ pages:
         - 'Connect your Orange Pi to WIFI' : 'wifi-connect.md'
         - 'Update your System' : 'update.md'
         - 'Change your Keyboard Language' : 'keyboard-language.md'
-        - 'Flash a OS to a SD Card' : 'etcher.md'
+        - 'Flash an OS to a SD Card' : 'etcher.md'
 
     - 'Orange Pi i96' :
         - 'Orange Pi i96 Overview' : 'i96-overview.md'
