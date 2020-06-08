@@ -33,6 +33,22 @@ pages:
         - 'Change your Keyboard Language' : 'keyboard-language.md'
         - 'Flash an OS to a SD Card' : 'etcher.md'
 
+    - 'Orange Pi 4' :
+        - Use opi-config to Configure system : 'orangepi4/chapter-1.md'
+        - Control GPIO with python : 'orangepi4/chapter-2.md'
+        - Install Chinese input methods : 'orangepi4/chapter-3.md'
+        - install QT and it’s using examples : 'orangepi4/chapter-4.md'
+        - View and control CPU frequency : 'orangepi4/chapter-5.md'
+        - Integrated OpenCV : 'orangepi4/chapter-6.md'
+        - Integrated XRDP remote desktop : 'orangepi4/chapter-7.md'
+        - USB Camera use : 'orangepi4/chapter-8.md'
+        - Use the camera + development board to realize video streaming : 'orangepi4/chapter-9.md'
+        - Use Docker on orangepi 4 : 'orangepi4/chapter-10.md'
+        - mjpg-streamer network video streaming server : 'orangepi4/chapter-11.md'
+        - Install opencv : 'orangepi4/chapter-12.md'
+        - Integrated caffe : 'orangepi4/chapter-13.md'
+        - Integrated TensorFlow : 'orangepi4/chapter-14.md'
+
     - 'Orange Pi i96' :
         - 'Orange Pi i96 Overview' : 'i96-overview.md'
         - 'Getting Started with the i96' : 'i96-start.md'
@@ -45,4 +61,3 @@ pages:
 
     - 'Boards' : 
         - 'OrangePi Zero' : 'OrangePi Zero.md'
-
